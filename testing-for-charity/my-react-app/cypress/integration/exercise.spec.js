@@ -4,16 +4,16 @@ describe('Exercise', () => {
     it('loads', ()=> {
         /** Your code below */
     
-        //1. Use cy.visit('/') to go to the app url
-        //2. Use cy.get('.App-link').should('be.visible') to assert valid state
+        cy.visit('/');
+        ;cy.get('.App-link').should('be.visible');
         /** Your code above */
     })
     
     it('link goes to ultimateqa', ()=> {
         /** Your code below */
     
-        // 1. Use cy.visit('/') to go to the app url
-        // 2. cy.get('').should('have.attr', 'href').and('include', 'ultimateqa.com')
+        cy.visit('/'); // to go to the app url
+        cy.get('.App-link').should('have.attr', 'href').and('include', 'ultimateqa.com');
     
         /** Your code above */
     })
@@ -21,8 +21,8 @@ describe('Exercise', () => {
     it('should open link in new tab',()=> {
         /** Your code below */
     
-        // 1. Cmon, you know how to open the url now :)
-        // 2. cy.get('').should('have.attr', 'WHAT').and('include', 'WHAT VALUE')
+        cy.visit('/');
+        cy.get('.App-link').should('have.attr', 'target').and('include', '_blank');
     
         /** Your code above */
     })  
